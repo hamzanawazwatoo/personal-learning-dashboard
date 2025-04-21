@@ -70,7 +70,6 @@ def register():
 
     return render_template("register.html")
 
-
 @app.route("/dashboard")
 @login_required
 def dashboard():
@@ -87,8 +86,6 @@ def add_goal():
     db.session.commit()
     return redirect(url_for("dashboard"))
 
-
-
 @app.route("/toggle_goal", methods=["POST"])
 @login_required
 def toggle_goal():
@@ -96,23 +93,21 @@ def toggle_goal():
     goal = Goal.query.filter_by(id=goal_id, user_id=current_user.id).first()
 
     if goal:
-        goal.completed = not goal.completed  # Toggle True/False
+        goal.completed = not goal.completed
         db.session.commit()
 
     return redirect(url_for("dashboard"))
 
-
-
 @app.route("/remove_goal", methods=["POST"])
+@login_required
 def remove_goal():
     title = request.form.get("title")
     deadline = request.form.get("deadline")
-    # Find the goal matching title, deadline, and current user
-    goal_to_remove = Goal.query.filter_by(  #goal represents goals table in your database
-        title=title,                        #.query start builiding query using sqlachemy(hey database i want to search in goal table)
+    goal_to_remove = Goal.query.filter_by(
+        title=title,
         deadline=deadline,
         user_id=current_user.id
-    ).first() #.first() return the first matching goal
+    ).first()
 
     if goal_to_remove:
         db.session.delete(goal_to_remove)
@@ -120,11 +115,8 @@ def remove_goal():
 
     return redirect(url_for("dashboard"))
 
-
-#  THIS IS THE KEY PART!
+#  Run the app on public IP (for hosting platforms like Replit/Render)
 if __name__ == "__main__":
     with app.app_context():
-        db.create_all()  # Create site.db if it doesn’t exist
-    app.run(debug=True)
-    if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=3000)
+        db.create_all()
+    app.run(host="0.0.0.0", port=3000, debug=True)
