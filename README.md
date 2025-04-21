@@ -40,5 +40,10 @@ This dashboard is for all kinds of people. Whether you’re learning programming
 - Database: SQLite
 - Others: Jinja2 templating, Flask sessions
 
+  # Clone the Repository:
+   git clone https://github.com/hamzanawazwatoo/personal-learning-dashboard.git
+   cd personal-learning-dashboard
+ # live link for demo:
+ https://c04db111-f718-4515-bf36-709b6581a939-00-2qxkz3qrlyevx.sisko.replit.dev/
 
 
