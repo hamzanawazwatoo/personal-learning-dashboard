@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<div class="container text-center mt-5">
+    <h1 class="display-4 mb-4">🎯 Personal Learning Dashboard</h1>
+    <p class="lead mb-4">
+        Set your goals. Track your progress. Stay motivated.
+    </p>
+
+    {% if session["user_id"] %}
+        <a href="/dashboard" class="btn btn-primary btn-lg">Go to Dashboard</a>
+    {% else %}
+        <a href="/login" class="btn btn-outline-primary btn-lg me-2">Log In</a>
+        <a href="/register" class="btn btn-success btn-lg">Register</a>
+    {% endif %}
+</div>
+{% endblock %}
