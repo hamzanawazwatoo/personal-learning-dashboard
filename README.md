@@ -1,50 +1,43 @@
-# Personal Learning Dashboard
-video demo link:https://youtu.be/mQeA4u6vwKU?si=-0wrBuh-w_G-ei_m
 
+Personal Learning Dashboard
+Video Demo:https://youtu.be/iCaUQidTtBI
 Name: Hamza Nawaz
-GitHub: [Hamzanawazwato](https://github.com/Hamzanawazwato)
+GitHub: Hamzanawazwato
+clone repository:(https://github.com/hamzanawazwatoo/personal-learning-dashboard.git)
 edX Username: Hamzanawazwato
 Location: Lahore, Punjab, Pakistan
 Date of Submission: April 20, 2025
 
----
+Overview
+The Personal Learning Dashboard is a full-featured Flask-based web application that enables users to set, manage, and track their personal educational goals. The app is designed for students, self-learners, and professionals alike who want to stay accountable and organized in their learning journey.
 
-## Project Description
+The platform features a secure login and registration system, a dynamic dashboard for adding and updating goals, and visual progress indicators to show how far a user has progressed with their goals. All data is stored using an SQLite database, and the user interface is built with HTML, CSS, Bootstrap, and JavaScript for a clean, responsive experience.
 
-Personal Learning Dashboard is a Flask-based web application designed to help students manage their educational goals and track their academic progress. The platform enables users to:
+Project Motivation
+Throughout CS50x, I found myself constantly setting small goals — whether for finishing problem sets, exploring additional concepts, or scheduling time for practice. I realized how helpful it would be to have a central dashboard for tracking this learning journey. That idea became the foundation of this project: a tool for motivating learning through goal tracking.
 
-- Set and edit learning goals
-- Visualize progress toward their goals
-- Register and securely log in
-- Stay organized and motivated throughout their learning journey
+I wanted to create something practical, visually appealing, and simple enough for anyone to use — whether they’re coding, studying for exams, or picking up a new skill.
 
-This dashboard is for all kinds of people. Whether you’re learning programming, preparing for exams, or mastering a new skill, this dashboard keeps you accountable and focused.
+Features
+ User Authentication: Users can register with a unique username and password. Sessions are managed securely to restrict access to personal dashboards.
 
----
+ Create and Track Goals: Users can add learning goals, define their descriptions, and track their progress using an interactive dashboard.
 
-## Features
+ Progress Indicators: Visual feedback in the form of progress bars keeps users aware of their progress.
 
-- User registration and login (with session handling)
-- Set, edit, and track personalized goals
-- Visual progress tracking (progress bars, status indicators)
-- SQLite database integration for personal data storage
-- Responsive UI built with HTML, CSS & Bootstrap
-- Simple and best user experience
+ Goal Editing and Deletion: Goals can be updated or removed at any time to reflect real progress.
 
----
+ Responsive Design: Clean UI built with Bootstrap ensures the application is usable across devices.
 
-## Technologies Used
+ Persistent Storage: All data is saved using SQLite, allowing for personal, private storage of goals and user sessions.
 
-- CS50x knowledge
-- Backend: Python (Flask), Flask-Login
-- Frontend: HTML, CSS, Bootstrap, JavaScript
-- Database: SQLite
-- Others: Jinja2 templating, Flask sessions
+Technologies Used
+Backend: Python (Flask), Flask-Login, Jinja2 Templates
 
-  # Clone the Repository:
-   git clone https://github.com/hamzanawazwatoo/personal-learning-dashboard.git
-   cd personal-learning-dashboard
- # live link for demo:
- https://c04db111-f718-4515-bf36-709b6581a939-00-2qxkz3qrlyevx.sisko.replit.dev/
+Frontend: HTML5, CSS3, Bootstrap 5, JavaScript
+
+Database: SQLite (lightweight and built-in)
+
+Development Tools: CS50 IDE, Replit
 
 
