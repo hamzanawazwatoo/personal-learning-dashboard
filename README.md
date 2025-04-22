@@ -20,7 +20,7 @@ This dashboard allows users to register, log in, set learning goals, update thei
 
 - **User Authentication**: Users can register and log in securely. The session persists during use, and each user sees only their own goals.
 - **Goal Management**: Users can add new goals with a title, description, deadline, and progress percentage. They can update or delete goals as needed.
-- **Visual Feedback**: Each goal is displayed with a progress bar indicating how close the user is to completion.
+- **Visual Feedback**: Each goal is displayed with a progress bar indicating how close the user is to completion.And a delete option to delete your completed goals 
 - **Responsive Design**: The site is usable on both desktop and mobile thanks to Bootstrap.
 - **Data Persistence**: All user data is stored in an SQLite database and is retrieved dynamically.
 
@@ -44,14 +44,13 @@ This folder contains all the HTML templates for the app, rendered by Flask using
 - `index.html`: The homepage that introduces the app and links to login/register.
 - `login.html`: The user login form.
 - `register.html`: The user registration form.
-- `dashboard.html`: The main interface where users can see their goals, add new ones, update progress, and delete them.
-- `add_goal.html`: A form where users can input a new learning goal.
-- `edit_goal.html`: A form pre-filled with an existing goal's details for updating.
+- `dashboard.html`: The main interface where users can see their goals, add new ones at route("/add_goals"), update progress(completed or in progress)at route ("/toggle_goals"), and 
+   delete them at route("/remove_goal") all of these routes are redirected to dashboard.html.
 
 ### `static/`
 Contains all the static assets (CSS and JavaScript) used by the app.
 
-- `style.css`: Custom styling applied on top of Bootstrap. It defines specific styles for goal cards, progress bars, and dashboard layout.
+- `style.css`: Custom styling applied on top of Bootstrap. It defines specific styles for goal cards, progress bars(toggle method), and dashboard layout.
 - `script.js`: Contains JavaScript code for progress bar animations and client-side interactivity. It could also be extended to support AJAX updates in future versions.
 
 ## `goals.db`
@@ -68,7 +67,10 @@ Lists Python dependencies. Currently includes:
 - `Flask-Session`
 - `Werkzeug`
 - `sqlite3` (built-in)
-
+- 'Flask-SQLAlchemy'
+- 'Jinja2'
+- 'python-dotenv'
+   
 ## How to Run the Project
 
 1. Clone the repository or download the ZIP.
@@ -97,7 +99,9 @@ Sessions are cleared once the browser is closed (unless persistent sessions are 
 Future Plans
 Add support for goal categories and tags (e.g., "Programming", "Math").
 
-Add email reminders and a calendar integration.
+Add email reminders(auto emailing) and a calendar integration.
+
+Add auto-track function which will track the progress session automaticaly
 
 Improve the frontend using a JavaScript framework like Vue or React.
 
@@ -107,7 +111,7 @@ Conclusion
 This project represents the culmination of everything I’ve learned in CS50x: from Python and Flask to HTML, CSS, and databases. It’s functional, personalized, and something I’ll continue to build on. I’ve gained hands-on experience in full-stack development, and this project gave me the confidence to continue pursuing web and AI-based solutions.
 
 Author
-Hamzanawazwato
+Hamza Nawaz
 Email
 hamzawatoo5152@gmail.com
 
