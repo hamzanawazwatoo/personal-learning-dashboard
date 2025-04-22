@@ -113,6 +113,6 @@ This project represents the culmination of everything I’ve learned in CS50x: f
 Author
 Hamza Nawaz
 Email
-hamzawatoo5152@gmail.com
+hamzawatoo5251@gmail.com
 
 
